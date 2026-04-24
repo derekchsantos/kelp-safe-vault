@@ -32,7 +32,7 @@ O sistema foi testado com sucesso na rede **Sepolia**. Abaixo estão as evidênc
 ### Resposta do Agente no Terminal
 O print abaixo comprova o momento em que o agente detectou uma transação suspeita, calculou o risco em **0.95** e executou o comando de pausa na blockchain.
 
-![Terminal do Agente](assets/agent-pause.png)
+![Terminal do Agente](assets/agent-pause-v2.png)
 
 *   **Log Principal:** `🚨 DEFENSIVE ACTION: Pausing contract.`
 *   **Confirmação:** `✅ PAUSED! Hash: 0x1a917a360fbd73debcf0c506fbb883ffe8ed8176407cd54416a761461f029c31`
