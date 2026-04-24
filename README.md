@@ -1,10 +1,11 @@
 # Kelp Safe Vault: Autonomous AI Security Agent
 
-> **Smart Contract Security Lab** apresentando um agente de IA autônomo que monitora transações em tempo real na rede Sepolia, detecta ameaças e executa pausas defensivas automaticamente.
+> Smart Contract Security Lab: Um agente de IA autônomo que monitora transações em tempo real na rede Sepolia, detecta ameaças via LLM e executa pausas defensivas automaticamente.
 
 ![Status](https://shields.io)
 ![License](https://shields.io)
 ![Solidity](https://shields.io)
+![Python](https://shields.io)
 
 ## Visão Geral do Projeto
 
