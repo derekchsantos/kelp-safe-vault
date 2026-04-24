@@ -1,0 +1,10 @@
+[
+  {
+    "timestamp": "2026-04-23T17:30:00",
+    "block": 10718729,
+    "tx_hash": "0xc0b040895e5ccd63c31f6a7201f1679819d8e48d04c14991f20496a226b402c5",
+    "risk_score": 0.0,
+    "reasons": [],
+    "action_taken": "ALERTED"
+  }
+]

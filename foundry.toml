@@ -1,0 +1,23 @@
+[profile.default]
+src = "contracts"
+out = "out"
+libs = ["lib"]
+optimizer = true
+optimizer_runs = 200
+
+# FORÇAR O CAMINHO CORRETO DO FORGE-STD
+remappings = [
+    "forge-std/=lib/forge-std/src/"
+]
+
+fs_permissions = [{ access = "read-write", path = "./" }]
+ignored_error_codes = [3860]
+
+[rpc_endpoints]
+mainnet = "https://ethereum.reth.rs/rpc"
+optimism_sepolia = "https://sepolia.optimism.io/"
+arbitrum_one_sepolia = "https://sepolia-rollup.arbitrum.io/rpc/"
+needs_undefined_env_var = "${UNDEFINED_RPC_URL_PLACEHOLDER}"
+
+[lint]
+lint_on_build = false

@@ -1,0 +1,25 @@
+{
+  "name": "kelp-safe-vault",
+  "version": "1.0.0",
+  "description": "Laboratório de segurança de Smart Contracts com Agente Autônomo de IA",
+  "main": "index.js",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "node": "hardhat node",
+    "deploy:sepolia": "hardhat run scripts/deploy.js --network sepolia",
+    "deploy:local": "hardhat run scripts/deploy.js --network localhost",
+    "console": "hardhat console",
+    "clean": "hardhat clean",
+    "audit": "slither . --exclude naming-convention,unused-return --json reports/slither-report.json"
+  },
+  "keywords": ["blockchain", "security", "defi", "ai-agent"],
+  "author": "Seu Nome",
+  "license": "MIT",
+  "packageManager": "pnpm@10.33.1",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "dotenv": "^17.4.2",
+    "hardhat": "^2.28.6"
+  }
+}

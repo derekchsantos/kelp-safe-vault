@@ -1,0 +1,35 @@
+node_modules
+.env
+
+# Hardhat Files
+/cache
+/artifacts
+
+# TypeChain Files
+/typechain
+/typechain-types
+
+# Solidity Coverage Files
+/coverage
+/coverage.json
+
+# Hardhat Ignition Default Folder
+ignition/deployments/chain-31337
+
+# Config (Arquivos de configuração local com chaves)
+config.yaml
+ai-agent/config.yaml
+
+# Python Virtual Environment
+venv/
+__pycache__/
+*.pyc
+
+# Reports and Logs
+reports/
+*.log
+
+# Foundry Output
+out/
+cache/
+broadcast/
