@@ -71,5 +71,5 @@ Se você deseja rodar a interface em sua máquina:
 *   **Smart Contract:** [Etherscan Sepolia](https://etherscan.io)
 
 ---
-Construído para a comunidade de Segurança DeFi. 🚀
+Construído para a comunidade de Segurança DeFi. 
 
