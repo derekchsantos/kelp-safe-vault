@@ -1,3 +1,6 @@
+# @author Derek Christopher
+# -*- coding: utf-8 -*-
+
 import asyncio
 import json
 import logging
@@ -66,7 +69,7 @@ class AutonomousSecurityAgent:
             return {"is_malicious": False, "risk_score": 0.1, "reason": "Safe deposit detected"}
 
     def emergency_pause(self, reason):
-        logger.warning(f"🚨 DEFENSIVE ACTION: Pausing contract. Reason: {reason}")
+        logger.warning(f"DEFENSIVE ACTION: Pausing contract. Reason: {reason}")
         try:
             tx = self.contract.functions.pause().build_transaction({
                 'from': self.admin_account.address,
@@ -76,7 +79,7 @@ class AutonomousSecurityAgent:
             })
             signed_tx = self.w3.eth.account.sign_transaction(tx, self.admin_account.key)
             tx_hash = self.w3.eth.send_raw_transaction(signed_tx.raw_transaction)
-            logger.info(f"✅ PAUSED! Hash: {tx_hash.hex()}")
+            logger.info(f"PAUSED! Hash: {tx_hash.hex()}")
             return tx_hash.hex()
         except Exception as e:
             logger.error(f"Failed to pause: {e}")
@@ -87,7 +90,7 @@ class AutonomousSecurityAgent:
         for tx in block.transactions:
             # Comparação segura de endereços (lowercase)
             if tx.to and tx.to.lower() == self.contract.address.lower():
-                logger.info(f"🎯 Tx detectada no contrato: {tx.hash.hex()}")
+                logger.info(f"Tx detectada no contrato: {tx.hash.hex()}")
                 
                 # Análise Simples
                 value_eth = self.w3.from_wei(tx['value'], 'ether')
@@ -106,7 +109,7 @@ class AutonomousSecurityAgent:
                 }
                 
                 # Salva Alerta no JSON (para o Dashboard)
-                logger.info(f"⚠️ Alerta Gerado: {alert}")
+                logger.info(f"Alerta Gerado: {alert}")
                 with open("reports/critical_alerts.json", "a") as f:
                     f.write(json.dumps(alert) + "\n")
                 
@@ -115,7 +118,7 @@ class AutonomousSecurityAgent:
                     self.emergency_pause(analysis['reason'])
 
     async def run_monitor(self):
-        logger.info(f"🚀 Monitoring started at block {self.last_processed_block}")
+        logger.info(f"Monitoring started at block {self.last_processed_block}")
         while True:
             try:
                 current_block = self.w3.eth.block_number
@@ -125,7 +128,7 @@ class AutonomousSecurityAgent:
                     self.last_processed_block = current_block - 5
                 
                 for block_num in range(self.last_processed_block + 1, current_block + 1):
-                    logger.info(f"🔎 Verificando bloco: {block_num}")
+                    logger.info(f"Verificando bloco: {block_num}")
                     self.process_block(block_num)
                     self.last_processed_block = block_num
                 
