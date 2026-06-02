@@ -31,8 +31,8 @@ O print abaixo comprova o momento em que o agente detectou uma transação suspe
 
 ![Terminal do Agente](assets/agent-pause-v2.png)
 
-*   **Log Principal:** `🚨 DEFENSIVE ACTION: Pausing contract.`
-*   **Confirmação:** `✅ PAUSED! Hash: 0x1a917a360fbd73debcf0c506fbb883ffe8ed8176407cd54416a761461f029c31`
+*   **Log Principal:** `DEFENSIVE ACTION: Pausing contract.`
+*   **Confirmação:** `PAUSED! Hash: 0x1a917a360fbd73debcf0c506fbb883ffe8ed8176407cd54416a761461f029c31`
 
 ### Dashboard de Monitoramento
 Interface visual que exibe os alertas gerados e o status atual do contrato.
