@@ -30,12 +30,12 @@ O sistema foi testado com sucesso na rede **Sepolia**. Abaixo estão as evidênc
 O bloco abaixo demonstra o momento exato em que o agente de segurança interceptou a ameaça cibernética, calculou o índice de risco e aplicou a defesa ativa na rede de testes:
 
 ```text
-[2026-06-01 22:07:48] 🔍 ALERT - Chamada suspeita identificada para a função withdraw()
-[2026-06-01 22:07:51] 🧠 EVAL  - Risco calculado pela IA: 0.95 (Vetor de Reentrada Potencial)
-[2026-06-01 22:07:51] 🚨 DEFENSIVE ACTION - Iniciando procedimento de emergência. Pausing contract...
-[2026-06-01 22:07:55] ✅ SUCCESS - Transação de pausa confirmada na Blockchain!
-[2026-06-01 22:07:55] 📝 LOG     - Hash: 0x1a917a360fbd73debcf0c506fbb883ffe8ed8176407cd54416a761461f029c31
-[2026-06-01 22:07:56] 🔒 STATUS  - Contrato SafeVault alterado com sucesso para: PAUSED
+[2026-06-01 22:07:48] ALERT - Chamada suspeita identificada para a função withdraw()
+[2026-06-01 22:07:51] EVAL  - Risco calculado pela IA: 0.95 (Vetor de Reentrada Potencial)
+[2026-06-01 22:07:51] DEFENSIVE ACTION - Iniciando procedimento de emergência. Pausing contract...
+[2026-06-01 22:07:55] SUCCESS - Transação de pausa confirmada na Blockchain!
+[2026-06-01 22:07:55] LOG     - Hash: 0x1a917a360fbd73debcf0c506fbb883ffe8ed8176407cd54416a761461f029c31
+[2026-06-01 22:07:56] STATUS  - Contrato SafeVault alterado com sucesso para: PAUSED
 ```
 
 ### Dashboard de Monitoramento
