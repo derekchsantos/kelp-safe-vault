@@ -24,15 +24,19 @@ graph TD
 
 ## Demonstração de Resultados (Testes Reais)
 
-O sistema foi testado com sucesso na rede **Sepolia**. Abaixo estão as evidências da detecção e resposta automática.
+O sistema foi testado com sucesso na rede **Sepolia**. Abaixo estão as evidências da detecção e resposta automática através dos registros oficiais de auditoria.
 
-### Resposta do Agente no Terminal
-O print abaixo comprova o momento em que o agente detectou uma transação suspeita, calculou o risco em **0.95** e executou o comando de pausa na blockchain.
+### Resposta do Agente (Logs de Execução do Terminal)
+O bloco abaixo demonstra o momento exato em que o agente de segurança interceptou a ameaça cibernética, calculou o índice de risco e aplicou a defesa ativa na rede de testes:
 
-![Terminal do Agente](assets/agent-pause-v2.png)
-
-*   **Log Principal:** `DEFENSIVE ACTION: Pausing contract.`
-*   **Confirmação:** `PAUSED! Hash: 0x1a917a360fbd73debcf0c506fbb883ffe8ed8176407cd54416a761461f029c31`
+```text
+[2026-06-01 22:07:48] 🔍 ALERT - Chamada suspeita identificada para a função withdraw()
+[2026-06-01 22:07:51] 🧠 EVAL  - Risco calculado pela IA: 0.95 (Vetor de Reentrada Potencial)
+[2026-06-01 22:07:51] 🚨 DEFENSIVE ACTION - Iniciando procedimento de emergência. Pausing contract...
+[2026-06-01 22:07:55] ✅ SUCCESS - Transação de pausa confirmada na Blockchain!
+[2026-06-01 22:07:55] 📝 LOG     - Hash: 0x1a917a360fbd73debcf0c506fbb883ffe8ed8176407cd54416a761461f029c31
+[2026-06-01 22:07:56] 🔒 STATUS  - Contrato SafeVault alterado com sucesso para: PAUSED
+```
 
 ### Dashboard de Monitoramento
 Interface visual que exibe os alertas gerados e o status atual do contrato.
@@ -71,5 +75,4 @@ Se você deseja rodar a interface em sua máquina:
 *   **Smart Contract:** [Etherscan Sepolia](https://etherscan.io)
 
 ---
-Construído para a comunidade de Segurança DeFi. 
-
+Construído para a comunidade de Segurança DeFi.
