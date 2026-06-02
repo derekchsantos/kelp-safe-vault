@@ -4,6 +4,8 @@ pragma solidity ^0.8.20;
 
 import "../contracts/SafeVault.sol";
 
+//@author Derek Christopher
+
 contract ReentrancyAttack {
     SafeVault public vault;
     uint256 public stolenAmount;
