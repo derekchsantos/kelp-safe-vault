@@ -1,6 +1,3 @@
-# @author Derek Christopher
-# -*- coding: utf-8 -*-
-
 import streamlit as st
 import pandas as pd
 import json
