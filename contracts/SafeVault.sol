@@ -5,7 +5,6 @@ pragma solidity ^0.8.20;
  * @title SafeVault
  * @notice Smart contract with reentrancy protection and pause mechanism
  * @dev Inspired by lessons from the KelpDAO incident (April 2026)
- * @author Derek Christopher
  */
 
 contract SafeVault {
