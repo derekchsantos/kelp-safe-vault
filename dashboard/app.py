@@ -1,6 +1,3 @@
-# @author Derek Christopher
-# -*- coding: utf-8 -*-
-
 import streamlit as st
 import pandas as pd
 import json
@@ -10,7 +7,7 @@ from datetime import datetime
 # Configuração da página
 st.set_page_config(page_title="Kelp Safe Vault - Security Dashboard", layout="wide")
 
-st.title("🛡️ Kelp Safe Vault - Security Dashboard")
+st.title("Kelp Safe Vault - Security Dashboard")
 st.markdown("Monitoramento em tempo real do contrato SafeVault.")
 
 # Dados de exemplo (Fallback garantido)
@@ -64,10 +61,10 @@ if alerts:
     df = pd.DataFrame(alerts)
     df['timestamp'] = pd.to_datetime(df['timestamp'])
     
-    st.subheader("📈 Evolução do Risco")
+    st.subheader("Evolução do Risco")
     st.line_chart(df.set_index('timestamp')['risk_score'])
 
-    st.subheader("🚨 Últimos Alertas")
+    st.subheader("Últimos Alertas")
     st.dataframe(df[['timestamp', 'tx_hash', 'risk_score', 'reasons', 'action_taken']].sort_values(by='timestamp', ascending=False))
 else:
     st.info("Nenhum alerta registrado ainda. O agente está monitorando...")
