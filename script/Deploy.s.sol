@@ -4,8 +4,6 @@ pragma solidity ^0.8.20;
 import "forge-std/Script.sol";
 import "../contracts/SafeVault.sol";
 
-//@author Derek Christopher
-
 contract DeployScript is Script {
     function run() external {
         // Pega a chave privada do ambiente
